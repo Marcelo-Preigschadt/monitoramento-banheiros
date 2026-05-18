@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Banheiros</title>
+
+    <!-- Importa o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho principal -->
+    <header>
+        <h1>Monitoramento Inteligente de Banheiros</h1>
+        <p>Sistema IoT integrado com ESP32 + Supabase</p>
+    </header>
+
+    <!-- Container principal -->
+    <main class="container">
+
+        <!-- Card quantidade de usos -->
+        <section class="card">
+            <h2>Total de Registros</h2>
+
+            <!-- Número total -->
+            <p id="total-usos">0</p>
+        </section>
+
+        <!-- Card último uso -->
+        <section class="card">
+            <h2>Último Registro</h2>
+
+            <!-- Informações do último uso -->
+            <div id="ultimo-registro">
+                Nenhum dado encontrado
+            </div>
+        </section>
+
+        <!-- Card status -->
+        <section class="card">
+            <h2>Status Atual</h2>
+
+            <!-- Status do banheiro -->
+            <div id="status-banheiro" class="status offline">
+                Sem movimento
+            </div>
+        </section>
+
+        <!-- Card registrar limpeza -->
+        <section class="card">
+            <h2>Registrar Limpeza</h2>
+
+            <!-- Campo responsável -->
+            <input type="text" id="responsavel" placeholder="Nome do responsável">
+
+            <!-- Campo observação -->
+            <textarea id="observacao" placeholder="Observação"></textarea>
+
+            <!-- Botão -->
+            <button id="btn-limpeza">
+                Registrar Limpeza
+            </button>
+        </section>
+
+        <!-- Tabela de registros -->
+        <section class="card tabela-card">
+            <h2>Histórico de Utilização</h2>
+
+            <table>
+
+                <!-- Cabeçalho -->
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Banheiro</th>
+                        <th>Status</th>
+                        <th>Data/Hora</th>
+                    </tr>
+                </thead>
+
+                <!-- Corpo da tabela -->
+                <tbody id="tabela-monitoramento">
+
+                </tbody>
+
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Importa JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>

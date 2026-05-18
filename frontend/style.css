@@ -1,0 +1,152 @@
+/* Remove margens padrão */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Corpo do site */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Cabeçalho */
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Título */
+header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+/* Subtítulo */
+header p{
+    color:#cbd5e1;
+}
+
+/* Grid principal */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+/* Cards */
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Títulos dos cards */
+.card h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+/* Número principal */
+#total-usos{
+    font-size:4rem;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* Último registro */
+#ultimo-registro{
+    line-height:1.8;
+}
+
+/* Status */
+.status{
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+/* Sem movimento */
+.offline{
+    background:#991b1b;
+}
+
+/* Movimento detectado */
+.online{
+    background:#166534;
+}
+
+/* Inputs */
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+/* Textarea */
+textarea{
+    resize:none;
+    height:100px;
+}
+
+/* Botão */
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#0ea5e9;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover botão */
+button:hover{
+    background:#0284c7;
+}
+
+/* Card tabela */
+.tabela-card{
+    grid-column:1/-1;
+}
+
+/* Tabela */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* Cabeçalho */
+thead{
+    background:#334155;
+}
+
+/* Células */
+th,
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #475569;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+}
